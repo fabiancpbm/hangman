@@ -1,0 +1,39 @@
+div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 2px 2px 5px black;
+    text-align: center;
+}
+
+button, th, td, h1, h2, h3, h4, h5, p {
+    font-family: "Georgia";
+}
+
+.title {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.main {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ui-outputlabel {
+    font-size: 50px;
+    color: black;/*#29506b;*/
+}
+
+.ui-button,
+button.ui-button.ui-state-default,
+.ui-button.ui-state-default.mycolor{
+    background-color: white;
+    color: black;
+    background-position: 0px 0px;
+    border-color: black;
+    /*border-radius: 50%;*/
+}
+
+.teste{
+    background-color: green;
+}

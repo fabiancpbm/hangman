@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <link rel="stylesheet" type="text/css" href="style/style.css"/>
+    <script type="text/javascript" src="js/script.js"></script>
+</h:head>
+
+<h:body>
+
+    <div>
+        <h1 class="title">The Hangman Game!</h1>
+    </div>
+
+    <h:form id="form">
+
+        <div class="main">
+
+            <p:outputLabel value="Palavra: " style="font-size: 20px"/>
+            <p:outputLabel value="#{hangmanBean.word}" style="font-size: 20px"/>
+            <br/>
+            <h2>
+                <h:graphicImage value="images/forca6.png"
+                                rendered="#{hangmanBean.get6() and !hangmanBean.isGameOver()}"/>
+                <h:graphicImage value="images/forca5.png"
+                                rendered="#{hangmanBean.get5() and !hangmanBean.isGameOver()}"/>
+                <h:graphicImage value="images/forca4.png"
+                                rendered="#{hangmanBean.get4() and !hangmanBean.isGameOver()}"/>
+                <h:graphicImage value="images/forca3.png"
+                                rendered="#{hangmanBean.get3() and !hangmanBean.isGameOver()}"/>
+                <h:graphicImage value="images/forca2.png"
+                                rendered="#{hangmanBean.get2() and !hangmanBean.isGameOver()}"/>
+                <h:graphicImage value="images/forca1.png"
+                                rendered="#{hangmanBean.get1() and !hangmanBean.isGameOver()}"/>
+                <h:graphicImage value="images/forca0.png"
+                                rendered="#{hangmanBean.isGameLose()}"/>
+                <h:graphicImage value="images/focaganhou.png"
+                                rendered="#{hangmanBean.isGameWin()}"
+                />
+            </h2>
+
+            <br/>
+            <p:outputLabel value="Jogadas: " style="font-size: 20px"/>
+            <p:outputLabel value="#{hangmanBean.attempts}" style="font-size: 20px"/>
+        </div>
+
+        <div class="bottom-div">
+            <p:inputText value="#{hangmanBean.letter}" maxlength="1" size="2"
+                         disabled="#{hangmanBean.isGameOver()}">
+                <p:ajax event="keyup" update="form"/>
+            </p:inputText>
+            <p:commandButton value="Jogar" action="#{hangmanBean.guess()}"
+                             update="form"
+                             disabled="#{(empty hangmanBean.letter) or hangmanBean.isGameOver()}"
+            />
+            <p:spacer width="15px"/>
+            <p:commandButton value="Reset" action="#{hangmanBean.reset()}"
+                             update="form"/>
+        </div>
+    </h:form>
+
+</h:body>
+</html>
+
+
+
+
+
+
+
+
+
+

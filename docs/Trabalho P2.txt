@@ -1,0 +1,65 @@
+ Itens Disponíveis 
+=========================
+Trabalho Individual
+(1 itens = até 7 pontos)
+(2 itens = até 8 pontos)
+(3 itens = até 10 pontos)
+=========================
+Trabalho em Dupla
+(2 itens = até 7 pontos)
+(3 itens = até 8 pontos)
+(4 itens = até 10 pontos)
+=========================
+Trabalho em Trio
+(3 itens = até 7 pontos)
+(4 itens = até 10 pontos)
+=========================
+
+PRAZO - Até 26/06
+
+Item (A) - Melhorias de interface gráfica
+-----------------------------------------
+Ex.: Utilizar imagens ou icones
+     Melhorar o layout
+     Fundos, cabeçalhos, rodapés, etc.
+
+Item (B) - Implementação de Dicionários
+---------------------------------------
+Ex.: Trabalhar com banco de palavras sorteadas a cada rodada
+
+Item (C) - Melhorias de Interatividade
+--------------------------------------
+Ex.: Boneco animado da forca
+Ex.: Criar temporizador
+Ex.: Níveis de Dificuldade (facil, dificil...)
+Ex.: Adicionar sons ao jogo
+
+Item (D) - Criar Versão com Acessibilidade
+-----------------------------------------------------------------
+Ex.: Modificar o layout para ser amigável com tablets e celulares
+
+-----------------------------------------------------------------
+MELHORIAS FEITAS
+-----------------------------------------------------------------
+1: Ajuste na interface.
+2: Interatividade com as imagens da forca.
+3: Impedindo que o jogo siga se houver letras repetidas
+4: Permitindo apenas letras.
+5: Sorteando palavras do dicionário
+6: [FAZER] selecionar o nível pela interface.
+
+
+<!--        <p:panel header="Nível" style="margin-bottom:10px;">-->
+<!--            <h:panelGrid columns="1" cellpadding="5">-->
+<!--                <p:outputLabel value="Nível: " style="font-size: 20px"/>-->
+<!--                <p:selectOneMenu id="boxlevel" value="#{hangmanBean.selectedLevel}" style="width:300px">-->
+<!--                    <p:ajax event="keyup" update="form"/>-->
+<!--                    &lt;!&ndash;                        <p:ajax listener="#{dropdownView.onCountryChange}" update="form" />&ndash;&gt;-->
+<!--                    <f:selectItem itemLabel="Selecione um nível" itemValue="" noSelectionOption="true"/>-->
+<!--                    <f:selectItems value="#{hangmanBean.getLevels()}"/>-->
+<!--                </p:selectOneMenu>-->
+<!--            </h:panelGrid>-->
+
+<!--            <p:commandButton value="Começar" action="#{hangmanBean.configLevel()}"-->
+<!--                             update="form"/>-->
+<!--        </p:panel>-->
